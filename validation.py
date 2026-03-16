@@ -1,6 +1,7 @@
 def validate_positive_float(value):
-    """
-    Проверяет, что введённое значение является положительным числом.
-    Пока оставляем заглушку.
-    """
-    return True
+    try:
+        value = float(value)
+        return value > 0
+    except ValueError:
+        return False
+
